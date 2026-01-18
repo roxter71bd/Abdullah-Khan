@@ -1,0 +1,2475 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আল্লাহর দান ডিজাইন সেন্টার | প্রিমিয়াম ডেকোরেশন সেবা</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F766E;
+            --primary-dark: #115E59;
+            --secondary: #F59E0B;
+            --accent: #3B82F6;
+            --success: #10B981;
+            --danger: #EF4444;
+            --light: #FFFFFF;
+            --dark: #1F2937;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, #14B8A6 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #FBBF24 100%);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            background: var(--gray-50);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Glass Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Header */
+        .header {
+            background: var(--gradient-primary);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-top {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 28px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .logo-text h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .logo-text .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 5px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            transition: all 0.3s;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* User Actions */
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--gradient-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+            border: 3px solid white;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gradient-secondary);
+            color: var(--dark);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 118, 110, 0.9), rgba(17, 94, 89, 0.9)), 
+                        url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            margin-top: 120px;
+            border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Services */
+        .services-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Service Cards Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 14px;
+            z-index: 1;
+        }
+
+        .service-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            transition: transform 0.3s;
+        }
+
+        .service-image:hover {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .service-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .service-price {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: var(--gray-100);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reviews-slider {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 10px;
+            scrollbar-width: none;
+        }
+
+        .reviews-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .review-card {
+            min-width: 350px;
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review-info h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .review-stars {
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* Gallery */
+        .gallery-section {
+            padding: 100px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Contact Form */
+        .contact-section {
+            padding: 100px 0;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        /* Service Request Form */
+        .service-form {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            font-family: 'Noto Sans Bengali', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Communication Options */
+        .com-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .com-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .com-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Admin Panel */
+        .admin-panel {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .image-upload-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .image-upload-box {
+            border: 2px dashed var(--gray-200);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .image-upload-box:hover {
+            border-color: var(--primary);
+            background: var(--gray-50);
+        }
+
+        .image-upload-box i {
+            font-size: 36px;
+            color: var(--gray-200);
+            margin-bottom: 10px;
+        }
+
+        .uploaded-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .uploaded-image {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .uploaded-image img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .remove-image {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: var(--danger);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #CCCCCC;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--radius-lg);
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 25px;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Tab System */
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid var(--gray-200);
+            margin-bottom: 30px;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            color: var(--primary);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--success);
+            color: white;
+            padding: 20px 25px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-xl);
+            z-index: 3000;
+            display: none;
+            animation: slideInRight 0.5s ease;
+            max-width: 400px;
+        }
+
+        .notification.error {
+            background: var(--danger);
+        }
+
+        .notification.warning {
+            background: var(--secondary);
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Loading */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 4000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid var(--gray-200);
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .com-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .image-upload-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text h1 {
+                font-size: 22px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .stat-number {
+                font-size: 32px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="user-actions">
+                    <div class="contact-info" style="display: flex; gap: 20px; color: white;">
+                        <div><i class="fas fa-phone"></i> ০১৩১৭-৪৭২০৬৯</div>
+                        <div><i class="fas fa-map-marker-alt"></i> বাবলাতলা বাজার, ভাঙ্গা, ফরিদপুর</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>আল্লাহর দান ডিজাইন সেন্টার</h1>
+                        <div class="tagline">প্রিমিয়াম ডেকোরেশন সেবা | ১৫+ বছরের অভিজ্ঞতা</div>
+                    </div>
+                </a>
+                
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> হোম</a></li>
+                        <li><a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i> সেবাসমূহ</a></li>
+                        <li><a href="#reviews" class="nav-link"><i class="fas fa-star"></i> রিভিউ</a></li>
+                        <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> গ্যালারি</a></li>
+                        <li><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> যোগাযোগ</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-actions">
+                    <button class="btn btn-outline" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i> লগইন
+                    </button>
+                    <button class="btn btn-primary" id="requestBtn">
+                        <i class="fas fa-cart-plus"></i> সেবা নিন
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>আপনার স্বপ্নের ডেকোরেশন বাস্তবায়ন</h2>
+                <p>সাইড পর্দা, সিলিং ডিজাইন, চেয়ার কাভার থেকে শুরু করে সকল ধরনের ডেকোরেশন সামগ্রীর প্রিমিয়াম সেবা। ১৫+ বছরের অভিজ্ঞতায় আমরা গড়ে তুলেছি হাজারও সন্তুষ্ট গ্রাহকের তালিকা।</p>
+                <div style="display: flex; gap: 20px; justify-content: center; margin-top: 40px;">
+                    <button class="btn btn-primary" style="padding: 15px 40px;" onclick="showServiceRequest()">
+                        <i class="fas fa-bolt"></i> দ্রুত সেবা নিন
+                    </button>
+                    <button class="btn btn-outline" onclick="document.getElementById('gallery').scrollIntoView()">
+                        <i class="fas fa-play-circle"></i> ভিডিও ট্যুর
+                    </button>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="projectsCount">1500+</div>
+                        <div class="stat-label">সম্পন্ন প্রজেক্ট</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="clientsCount">1200+</div>
+                        <div class="stat-label">সন্তুষ্ট গ্রাহক</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">১৫+</div>
+                        <div class="stat-label">বছরের অভিজ্ঞতা</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">৯৮%</div>
+                        <div class="stat-label">সন্তুষ্টির হার</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">আমাদের বিশেষ সেবাসমূহ</h2>
+                <p class="section-subtitle">উচ্চমানের উপকরণ এবং মাস্টার কারিগর দ্বারা তৈরি সকল ধরনের ডেকোরেশন সামগ্রী</p>
+            </div>
+            
+            <div class="services-grid" id="servicesContainer">
+                <!-- Services will be loaded dynamically -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="btn btn-primary" onclick="showAllServices()">
+                    <i class="fas fa-eye"></i> সব সেবা দেখুন
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">গ্রাহকদের রিভিউ</h2>
+                <p class="section-subtitle">আমাদের সেবায় সন্তুষ্ট গ্রাহকদের মূল্যবান মতামত</p>
+            </div>
+            
+            <div class="reviews-slider" id="reviewsContainer">
+                <!-- Reviews will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">আমাদের কাজের গ্যালারি</h2>
+                <p class="section-subtitle">বিভিন্ন প্রকল্পে আমাদের তৈরি করা কিছু সেরা ডেকোরেশন কাজ</p>
+            </div>
+            
+            <div class="gallery-grid" id="galleryContainer">
+                <!-- Gallery items will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>যোগাযোগ করুন</h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>ঠিকানা</h4>
+                                <p>বাবলাতলা বাজার, ভাঙ্গা, ফরিদপুর</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>মোবাইল নম্বর</h4>
+                                <p>০১৩১৭-৪৭২০৬৯</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4>মালিক/দায়িত্বপ্রাপ্ত</h4>
+                                <p>প্রোঃ মোঃ আব্দুল্লাহ খান</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>কাজের সময়</h4>
+                                <p>সকাল ৯টা - রাত ৯টা<br>শুক্রবার বাদে</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-messenger"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="service-form">
+                    <h3 style="color: var(--primary); margin-bottom: 25px;">সেবা অনুরোধ ফর্ম</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label">আপনার নাম</label>
+                        <input type="text" class="form-control" id="customerName" placeholder="আপনার পূর্ণ নাম">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">মোবাইল নম্বর</label>
+                        <input type="tel" class="form-control" id="customerPhone" placeholder="০১XXXXXXXXX" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">ইমেইল (ঐচ্ছিক)</label>
+                        <input type="email" class="form-control" id="customerEmail" placeholder="email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">সেবার ধরন</label>
+                        <select class="form-control" id="serviceType" required>
+                            <option value="">সেবা নির্বাচন করুন</option>
+                            <option value="curtain">সাইড পর্দা</option>
+                            <option value="ceiling">সিলিং ডিজাইন</option>
+                            <option value="chair">চেয়ার কাভার</option>
+                            <option value="wedding">বিয়ের ডেকোরেশন</option>
+                            <option value="office">অফিস ডেকোরেশন</option>
+                            <option value="other">অন্যান্য</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">বিস্তারিত তথ্য</label>
+                        <textarea class="form-control" id="serviceDetails" rows="4" placeholder="আপনার প্রয়োজনীয়তার বিস্তারিত বর্ণনা করুন..."></textarea>
+                    </div>
+                    
+                    <h4 style="margin: 25px 0 15px; color: var(--primary);">যোগাযোগ মাধ্যম নির্বাচন করুন:</h4>
+                    <div class="com-options">
+                        <button class="com-btn" onclick="contactViaWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </button>
+                        <button class="com-btn" onclick="contactViaMessenger()">
+                            <i class="fab fa-facebook-messenger"></i> Messenger
+                        </button>
+                        <button class="com-btn" onclick="contactViaCall()">
+                            <i class="fas fa-phone-alt"></i> সরাসরি কল
+                        </button>
+                        <button class="com-btn" onclick="contactViaEmail()">
+                            <i class="fas fa-envelope"></i> ইমেইল
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>আল্লাহর দান ডিজাইন সেন্টার</h3>
+                    <p style="color: #CCCCCC; line-height: 1.8; margin-top: 15px;">
+                        ফরিদপুরের ভাঙ্গা উপজেলার অন্যতম সেরা ডেকোরেশন সেবা প্রদানকারী প্রতিষ্ঠান। ১৫+ বছরের অভিজ্ঞতা নিয়ে আমরা সেবা প্রদান করছি।
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>সেবাসমূহ</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> সাইড পর্দা</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> সিলিং ডিজাইন</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> চেয়ার কাভার</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> বিয়ের ডেকোরেশন</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> অফিস ডেকোরেশন</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>দ্রুত লিংক</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> হোম</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> সেবাসমূহ</a></li>
+                        <li><a href="#reviews"><i class="fas fa-chevron-right"></i> গ্রাহক রিভিউ</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> গ্যালারি</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>যোগাযোগ</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> বাবলাতলা বাজার, ভাঙ্গা, ফরিদপুর</a></li>
+                        <li><a href="tel:01317472069"><i class="fas fa-phone"></i> ০১৩১৭-৪৭২০৬৯</a></li>
+                        <li><a href="mailto:info@allahdandesign.com"><i class="fas fa-envelope"></i> info@allahdandesign.com</a></li>
+                    </ul>
+                    
+                    <div style="margin-top: 25px;">
+                        <h4 style="font-size: 16px; margin-bottom: 15px; color: var(--secondary);">এডমিন এক্সেস</h4>
+                        <button class="btn btn-outline" style="padding: 8px 15px; font-size: 14px;" onclick="showAdminLogin()">
+                            <i class="fas fa-lock"></i> এডমিন প্যানেল
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© ২০২৪ আল্লাহর দান ডিজাইন সেন্টার | সকল স্বত্ব সংরক্ষিত</p>
+                <p style="margin-top: 10px; font-size: 14px;">ডিজাইন ও ডেভেলপমেন্ট: প্রোঃ মোঃ আব্দুল্লাহ খান | GitHub হোস্টেড</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-circle"></i> অ্যাকাউন্টে লগইন করুন</h3>
+                <button class="close-btn" onclick="closeModal('loginModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('loginTab')">লগইন</button>
+                    <button class="tab" onclick="switchTab('registerTab')">রেজিস্টার</button>
+                </div>
+                
+                <div class="tab-content active" id="loginTab">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label class="form-label">ইমেইল বা ফোন নম্বর</label>
+                            <input type="text" class="form-control" id="loginEmail" placeholder="you@example.com বা ০১XXXXXXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">পাসওয়ার্ড</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="আপনার পাসওয়ার্ড" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">
+                            <i class="fas fa-sign-in-alt"></i> লগইন করুন
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="tab-content" id="registerTab">
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label class="form-label">পূর্ণ নাম</label>
+                            <input type="text" class="form-control" id="registerName" placeholder="আপনার পূর্ণ নাম" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ইমেইল</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ফোন নম্বর</label>
+                            <input type="tel" class="form-control" id="registerPhone" placeholder="০১XXXXXXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">পাসওয়ার্ড</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="শক্তিশালী পাসওয়ার্ড" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">পাসওয়ার্ড নিশ্চিত করুন</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword" placeholder="পাসওয়ার্ড আবার দিন" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">
+                            <i class="fas fa-user-plus"></i> অ্যাকাউন্ট তৈরি করুন
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal" id="adminLoginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-lock"></i> এডমিন লগইন</h3>
+                <button class="close-btn" onclick="closeModal('adminLoginModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">এডমিন পাসওয়ার্ড</label>
+                    <input type="password" class="form-control" id="adminPassword" placeholder="এডমিন পাসওয়ার্ড দিন">
+                </div>
+                <button class="btn btn-primary" style="width:100%;" onclick="loginAdmin()">
+                    <i class="fas fa-key"></i> লগইন করুন
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal" id="adminPanelModal">
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h3><i class="fas fa-cog"></i> এডমিন প্যানেল - কাজ ম্যানেজমেন্ট</h3>
+                <button class="close-btn" onclick="closeModal('adminPanelModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="admin-header">
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 5px;">স্বাগতম, এডমিন!</h3>
+                        <p style="color: #666;">নতুন সেবা যোগ করুন এবং বিদ্যমান সেবাগুলো ম্যানেজ করুন</p>
+                    </div>
+                    <button class="btn btn-danger" onclick="logoutAdmin()">
+                        <i class="fas fa-sign-out-alt"></i> লগআউট
+                    </button>
+                </div>
+                
+                <div class="tabs" style="margin-top: 30px;">
+                    <button class="tab active" onclick="switchAdminTab('addService')">সেবা যোগ করুন</button>
+                    <button class="tab" onclick="switchAdminTab('manageServices')">সেবা ম্যানেজ করুন</button>
+                    <button class="tab" onclick="switchAdminTab('manageGallery')">গ্যালারি ম্যানেজ করুন</button>
+                    <button class="tab" onclick="switchAdminTab('viewRequests')">সেবা অনুরোধ</button>
+                </div>
+                
+                <!-- Add Service Tab -->
+                <div class="tab-content active" id="addServiceTab">
+                    <form id="addServiceForm" style="margin-top: 30px;">
+                        <div class="form-group">
+                            <label class="form-label">সেবার নাম</label>
+                            <input type="text" class="form-control" id="serviceName" placeholder="সেবার নাম লিখুন" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">সেবার বিবরণ</label>
+                            <textarea class="form-control" id="serviceDescription" rows="4" placeholder="সেবার বিস্তারিত বর্ণনা লিখুন" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">দাম (টাকায়)</label>
+                            <input type="text" class="form-control" id="servicePrice" placeholder="যেমন: ৩৫০-৫৫০ টাকা প্রতি গজ" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">সেবার ক্যাটাগরি</label>
+                            <select class="form-control" id="serviceCategory" required>
+                                <option value="curtain">সাইড পর্দা</option>
+                                <option value="ceiling">সিলিং ডিজাইন</option>
+                                <option value="chair">চেয়ার কাভার</option>
+                                <option value="wedding">বিয়ের ডেকোরেশন</option>
+                                <option value="office">অফিস ডেকোরেশন</option>
+                                <option value="other">অন্যান্য</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">সেবার ছবি (একাধিক লিংক যোগ করুন)</label>
+                            <div class="image-upload-container">
+                                <div class="image-upload-box" onclick="addImageField()">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <p style="color: #666; margin-top: 10px;">ছবি যোগ করুন</p>
+                                </div>
+                                <div class="image-upload-box" onclick="addImageField()">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <p style="color: #666; margin-top: 10px;">ছবি যোগ করুন</p>
+                                </div>
+                                <div class="image-upload-box" onclick="addImageField()">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <p style="color: #666; margin-top: 10px;">ছবি যোগ করুন</p>
+                                </div>
+                            </div>
+                            <div id="imageFieldsContainer">
+                                <!-- Dynamic image fields will be added here -->
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width:100%; margin-top: 20px;">
+                            <i class="fas fa-plus-circle"></i> নতুন সেবা প্রকাশ করুন
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Manage Services Tab -->
+                <div class="tab-content" id="manageServicesTab">
+                    <div style="margin-top: 30px;">
+                        <h4 style="color: var(--primary); margin-bottom: 20px;">বিদ্যমান সেবাসমূহ</h4>
+                        <div id="existingServicesContainer">
+                            <!-- Existing services will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Manage Gallery Tab -->
+                <div class="tab-content" id="manageGalleryTab">
+                    <div style="margin-top: 30px;">
+                        <h4 style="color: var(--primary); margin-bottom: 20px;">গ্যালারি ছবি ম্যানেজ করুন</h4>
+                        <form id="addGalleryForm">
+                            <div class="form-group">
+                                <label class="form-label">ছবির লিংক</label>
+                                <input type="url" class="form-control" id="galleryImageUrl" placeholder="https://example.com/image.jpg" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">ছবির টাইটেল</label>
+                                <input type="text" class="form-control" id="galleryImageTitle" placeholder="ছবির বিবরণ" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-image"></i> গ্যালারিতে যোগ করুন
+                            </button>
+                        </form>
+                        
+                        <div style="margin-top: 40px;">
+                            <h5 style="color: #666; margin-bottom: 15px;">বিদ্যমান গ্যালারি ছবি</h5>
+                            <div class="uploaded-images" id="galleryImagesContainer">
+                                <!-- Gallery images will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- View Requests Tab -->
+                <div class="tab-content" id="viewRequestsTab">
+                    <div style="margin-top: 30px;">
+                        <h4 style="color: var(--primary); margin-bottom: 20px;">সেবা অনুরোধসমূহ</h4>
+                        <div id="serviceRequestsContainer">
+                            <!-- Service requests will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <script>
+        // Application State Management
+        class DesignCenterApp {
+            constructor() {
+                this.currentUser = null;
+                this.isAdmin = false;
+                this.services = [];
+                this.gallery = [];
+                this.reviews = [];
+                this.serviceRequests = [];
+                this.users = [];
+                this.init();
+            }
+
+            async init() {
+                await this.loadData();
+                this.setupEventListeners();
+                this.renderServices();
+                this.renderGallery();
+                this.renderReviews();
+                this.updateStats();
+                this.setupNavigation();
+            }
+
+            async loadData() {
+                // Try to load from GitHub first, then localStorage
+                try {
+                    const savedData = localStorage.getItem('allah_daan_design_center');
+                    if (savedData) {
+                        const data = JSON.parse(savedData);
+                        this.services = data.services || this.getDefaultServices();
+                        this.gallery = data.gallery || this.getDefaultGallery();
+                        this.reviews = data.reviews || this.getDefaultReviews();
+                        this.serviceRequests = data.serviceRequests || [];
+                        this.users = data.users || this.getDefaultUsers();
+                    } else {
+                        this.services = this.getDefaultServices();
+                        this.gallery = this.getDefaultGallery();
+                        this.reviews = this.getDefaultReviews();
+                        this.users = this.getDefaultUsers();
+                    }
+                } catch (error) {
+                    console.error('ডেটা লোড করতে সমস্যা:', error);
+                    this.services = this.getDefaultServices();
+                    this.gallery = this.getDefaultGallery();
+                    this.reviews = this.getDefaultReviews();
+                    this.users = this.getDefaultUsers();
+                }
+            }
+
+            getDefaultServices() {
+                return [
+                    {
+                        id: 1,
+                        name: "প্রিমিয়াম সিল্ক কার্টেন",
+                        description: "উচ্চমানের ইম্পোর্টেড সিল্ক কাপড়ের তৈরি বিশেষ ডিজাইনের সাইড পর্দা। বিভিন্ন রঙ, ডিজাইন এবং সাইজে পাওয়া যায়। পার্টিশন কার্টেন, ডোর কার্টেন এবং উইন্ডো কার্টেন সহ সকল ধরনের কার্টেন সেবা।",
+                        price: "৩৫০-৫৫০ টাকা প্রতি গজ",
+                        category: "curtain",
+                        images: [
+                            "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                            "https://images.unsplash.com/photo-1588854337236-6889d631faa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        ],
+                        featured: true,
+                        rating: 4.8,
+                        orders: 342
+                    },
+                    {
+                        id: 2,
+                        name: "জিপসাম সিলিং ডিজাইন",
+                        description: "আধুনিক জিপসাম সিলিং ডিজাইন এবং ইনস্টলেশন সার্ভিস। বিভিন্ন প্যাটার্ন, LED লাইটিং সিস্টেম এবং একোস্টিক ট্রিটমেন্ট সহ সিলিং সলিউশন। বেডরুম, লিভিং রুম, অফিস এবং কমার্শিয়াল স্পেসের জন্য বিশেষ ডিজাইন।",
+                        price: "২৫০-৪৫০ টাকা প্রতি বর্গফুট",
+                        category: "ceiling",
+                        images: [
+                            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                            "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        ],
+                        featured: true,
+                        rating: 4.9,
+                        orders: 289
+                    },
+                    {
+                        id: 3,
+                        name: "বিয়ের চেয়ার কাভার সেট",
+                        description: "বিয়ের অনুষ্ঠান এবং বিশেষ ইভেন্টের জন্য প্রিমিয়াম কোয়ালিটির চেয়ার কাভার সেট। সিল্ক, স্যাটিন এবং ভেলভেট কাপড়ে তৈরি। কাস্টম ডিজাইন, এমব্রয়ডারি এবং প্রিন্টিং সুবিধা সহ।",
+                        price: "২০০০-৫০০০ টাকা প্রতি সেট (৫০ পিস)",
+                        category: "chair",
+                        images: [
+                            "https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                            "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        ],
+                        featured: true,
+                        rating: 4.7,
+                        orders: 156
+                    }
+                ];
+            }
+
+            getDefaultGallery() {
+                return [
+                    { id: 1, image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", title: "আধুনিক সিলিং ডিজাইন" },
+                    { id: 2, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", title: "সিল্ক কার্টেন ইনস্টলেশন" },
+                    { id: 3, image: "https://images.unsplash.com/photo-1583484963886-cfe2bff2945f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", title: "বিয়ের ডেকোরেশন" },
+                    { id: 4, image: "https://images.unsplash.com/photo-1588854337236-6889d631faa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", title: "অফিস ডেকোরেশন" },
+                    { id: 5, image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", title: "বেডরুম ডেকোরেশন" },
+                    { id: 6, image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", title: "বিশেষ অনুষ্ঠান" }
+                ];
+            }
+
+            getDefaultReviews() {
+                return [
+                    {
+                        id: 1,
+                        name: "আহমেদ হোসেন",
+                        avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+                        rating: 5,
+                        text: "আল্লাহর দান ডিজাইন সেন্টার আমার নতুন অফিসের সব ডেকোরেশন করেছে। কাজের কোয়ালিটি এবং সময়মতো ডেলিভারি দুটোই অসাধারণ। বিশেষ করে সিলিং ডিজাইনটা সবাই প্রশংসা করে।",
+                        date: "১৫ মার্চ, ২০২৪",
+                        project: "অফিস ডেকোরেশন"
+                    },
+                    {
+                        id: 2,
+                        name: "ফাতেমা বেগম",
+                        avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+                        rating: 5,
+                        text: "বিয়ের দিনের জন্য যত ধরনের ডেকোরেশন দরকার সবই তারা করেছে। চেয়ার কাভার, স্টেজ ডেকোরেশন, লাইটিং - সবই পারফেক্ট ছিল। দামও যুক্তিসঙ্গত। সুপারিশ করব সবাইকে।",
+                        date: "২৮ ফেব্রুয়ারি, ২০২৪",
+                        project: "বিয়ের ডেকোরেশন"
+                    },
+                    {
+                        id: 3,
+                        name: "রফিকুল ইসলাম",
+                        avatar: "https://randomuser.me/api/portraits/men/67.jpg",
+                        rating: 4.5,
+                        text: "ঘরের জন্য সিল্ক কার্টেন করিয়েছি। কাপড়ের কোয়ালিটি এবং সেলাইয়ের কাজ খুব সুন্দর হয়েছে। ইনস্টলেশনও ঝামেলামুক্ত। আগামীতেও তাদের সেবা নেব।",
+                        date: "১০ ফেব্রুয়ারি, ২০২৪",
+                        project: "সাইড পর্দা"
+                    },
+                    {
+                        id: 4,
+                        name: "সাবিনা ইয়াসমিন",
+                        avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+                        rating: 5,
+                        text: "রেস্টুরেন্টের জন্য বিশেষ ডিজাইনের চেয়ার কাভার করিয়েছি। ডিজাইনটা একদম আমার মনের মত হয়েছে। কাস্টমাররা সবাই প্রশংসা করে। খুব ভালো সার্ভিস।",
+                        date: "৫ জানুয়ারি, ২০২৪",
+                        project: "চেয়ার কাভার"
+                    }
+                ];
+            }
+
+            getDefaultUsers() {
+                return [
+                    {
+                        id: 1,
+                        name: "প্রোঃ মোঃ আব্দুল্লাহ খান",
+                        email: "admin@allahdandesign.com",
+                        phone: "01317472069",
+                        password: "Abdullah Khan",
+                        role: "admin",
+                        joined: "2010-01-01",
+                        avatar: "A"
+                    }
+                ];
+            }
+
+            setupEventListeners() {
+                // Auth buttons
+                document.getElementById('loginBtn').addEventListener('click', () => this.showLoginModal());
+                document.getElementById('requestBtn').addEventListener('click', () => this.showServiceRequest());
+                
+                // Forms
+                document.getElementById('loginForm')?.addEventListener('submit', (e) => this.handleLogin(e));
+                document.getElementById('registerForm')?.addEventListener('submit', (e) => this.handleRegister(e));
+                document.getElementById('addServiceForm')?.addEventListener('submit', (e) => this.handleAddService(e));
+                document.getElementById('addGalleryForm')?.addEventListener('submit', (e) => this.handleAddGallery(e));
+                
+                // Admin
+                document.getElementById('adminPassword')?.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.loginAdmin();
+                });
+            }
+
+            setupNavigation() {
+                // Smooth scrolling for nav links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href').substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Update active nav
+                            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                            link.classList.add('active');
+                        }
+                    });
+                });
+
+                // Update active nav on scroll
+                window.addEventListener('scroll', () => {
+                    const sections = ['home', 'services', 'reviews', 'gallery', 'contact'];
+                    let currentSection = 'home';
+                    
+                    sections.forEach(section => {
+                        const element = document.getElementById(section);
+                        if (element) {
+                            const rect = element.getBoundingClientRect();
+                            if (rect.top <= 150 && rect.bottom >= 150) {
+                                currentSection = section;
+                            }
+                        }
+                    });
+                    
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${currentSection}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                });
+            }
+
+            renderServices() {
+                const container = document.getElementById('servicesContainer');
+                if (!container) return;
+                
+                container.innerHTML = this.services.map(service => `
+                    <div class="service-card animate">
+                        ${service.featured ? '<div class="service-badge">বেস্ট সেলার</div>' : ''}
+                        <div class="service-images">
+                            ${service.images.map((img, index) => `
+                                <img src="${img}" alt="${service.name} - Image ${index + 1}" class="service-image">
+                            `).join('')}
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">${service.name}</h3>
+                            <p class="service-description">${service.description}</p>
+                            <div class="service-meta">
+                                <div>
+                                    <div class="service-price">${service.price}</div>
+                                    <div style="color: #666; font-size: 14px;">
+                                        <i class="fas fa-star" style="color: #F59E0B;"></i> ${service.rating}/5 (${service.orders} অর্ডার)
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" onclick="app.requestService(${service.id})">
+                                    <i class="fas fa-shopping-cart"></i> অর্ডার
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            renderGallery() {
+                const container = document.getElementById('galleryContainer');
+                if (!container) return;
+                
+                container.innerHTML = this.gallery.map(item => `
+                    <div class="gallery-item">
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="gallery-overlay">
+                            <h4>${item.title}</h4>
+                            <p style="font-size: 14px; opacity: 0.9;">আরও দেখুন</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            renderReviews() {
+                const container = document.getElementById('reviewsContainer');
+                if (!container) return;
+                
+                container.innerHTML = this.reviews.map(review => `
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="${review.avatar}" alt="${review.name}" class="review-avatar">
+                            <div class="review-info">
+                                <h4>${review.name}</h4>
+                                <div class="review-stars">
+                                    ${'★'.repeat(Math.floor(review.rating))}${review.rating % 1 ? '½' : ''}${'☆'.repeat(5 - Math.ceil(review.rating))}
+                                    <span style="color: #666; margin-left: 10px;">${review.rating}/5</span>
+                                </div>
+                                <div style="color: #666; font-size: 14px; margin-top: 5px;">
+                                    <i class="fas fa-calendar"></i> ${review.date}
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"${review.text}"</p>
+                        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--gray-200);">
+                            <span style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 14px;">
+                                ${review.project}
+                            </span>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            updateStats() {
+                const totalProjects = this.services.reduce((sum, service) => sum + (service.orders || 0), 0);
+                const totalClients = this.users.filter(u => u.role === 'user').length + Math.floor(totalProjects * 0.8);
+                
+                document.getElementById('projectsCount').textContent = totalProjects + '+';
+                document.getElementById('clientsCount').textContent = totalClients + '+';
+            }
+
+            async saveData() {
+                const data = {
+                    services: this.services,
+                    gallery: this.gallery,
+                    reviews: this.reviews,
+                    serviceRequests: this.serviceRequests,
+                    users: this.users,
+                    lastUpdated: new Date().toISOString()
+                };
+                
+                localStorage.setItem('allah_daan_design_center', JSON.stringify(data));
+                
+                // Save to GitHub (simulated)
+                await this.saveToGitHub(data);
+            }
+
+            async saveToGitHub(data) {
+                // In production, implement GitHub API integration
+                console.log('GitHub-এ ডেটা সংরক্ষণ করা হয়েছে:', data);
+                
+                // Simulate API call
+                return new Promise(resolve => setTimeout(() => {
+                    this.showNotification('ডেটা সফলভাবে সংরক্ষণ করা হয়েছে', 'success');
+                    resolve(true);
+                }, 500));
+            }
+
+            showLoading() {
+                document.getElementById('loading').style.display = 'flex';
+            }
+
+            hideLoading() {
+                document.getElementById('loading').style.display = 'none';
+            }
+
+            showNotification(message, type = 'success') {
+                const notification = document.getElementById('notification');
+                const text = document.getElementById('notificationText');
+                
+                text.textContent = message;
+                notification.className = `notification ${type}`;
+                notification.style.display = 'block';
+                
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 3000);
+            }
+
+            showLoginModal() {
+                this.showModal('loginModal');
+                switchTab('loginTab');
+            }
+
+            showModal(modalId) {
+                document.getElementById(modalId).classList.add('active');
+            }
+
+            closeModal(modalId) {
+                document.getElementById(modalId).classList.remove('active');
+            }
+
+            switchTab(tabId) {
+                document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                document.querySelector(`[onclick="switchTab('${tabId}')"]`).classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            }
+
+            async handleLogin(e) {
+                e.preventDefault();
+                this.showLoading();
+                
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+                
+                const user = this.users.find(u => 
+                    (u.email === email || u.phone === email) && 
+                    u.password === password
+                );
+                
+                if (user) {
+                    this.currentUser = user;
+                    this.showNotification(`স্বাগতম, ${user.name}!`, 'success');
+                    this.closeModal('loginModal');
+                    this.updateUserInterface();
+                } else {
+                    this.showNotification('ভুল ইমেইল বা পাসওয়ার্ড', 'error');
+                }
+                
+                this.hideLoading();
+            }
+
+            async handleRegister(e) {
+                e.preventDefault();
+                this.showLoading();
+                
+                const name = document.getElementById('registerName').value;
+                const email = document.getElementById('registerEmail').value;
+                const phone = document.getElementById('registerPhone').value;
+                const password = document.getElementById('registerPassword').value;
+                const confirmPassword = document.getElementById('registerConfirmPassword').value;
+                
+                if (password !== confirmPassword) {
+                    this.showNotification('পাসওয়ার্ড মিলছে না', 'error');
+                    this.hideLoading();
+                    return;
+                }
+                
+                const existingUser = this.users.find(u => u.email === email || u.phone === phone);
+                if (existingUser) {
+                    this.showNotification('ইমেইল বা ফোন নম্বর ইতিমধ্যে ব্যবহার করা হয়েছে', 'error');
+                    this.hideLoading();
+                    return;
+                }
+                
+                const newUser = {
+                    id: Date.now(),
+                    name,
+                    email,
+                    phone,
+                    password,
+                    role: 'user',
+                    joined: new Date().toISOString(),
+                    avatar: name.charAt(0)
+                };
+                
+                this.users.push(newUser);
+                this.currentUser = newUser;
+                
+                await this.saveData();
+                
+                this.showNotification('অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে!', 'success');
+                this.closeModal('loginModal');
+                this.updateUserInterface();
+                this.hideLoading();
+            }
+
+            updateUserInterface() {
+                const loginBtn = document.getElementById('loginBtn');
+                if (this.currentUser) {
+                    loginBtn.innerHTML = `<i class="fas fa-user"></i> ${this.currentUser.name.split(' ')[0]}`;
+                    loginBtn.onclick = () => this.showUserProfile();
+                } else {
+                    loginBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> লগইন';
+                    loginBtn.onclick = () => this.showLoginModal();
+                }
+            }
+
+            showUserProfile() {
+                // Implement user profile modal
+                this.showNotification('প্রোফাইল পেজ উন্নয়নাধীন', 'warning');
+            }
+
+            requestService(serviceId) {
+                const service = this.services.find(s => s.id === serviceId);
+                if (service) {
+                    document.getElementById('serviceType').value = service.category;
+                    document.getElementById('serviceDetails').value = 
+                        `আমি "${service.name}" এর জন্য আগ্রহী। বিস্তারিত জানতে চাই।`;
+                    
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                    
+                    this.showNotification(`"${service.name}" নির্বাচন করা হয়েছে`, 'success');
+                }
+            }
+
+            showServiceRequest() {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Communication Methods
+            contactViaWhatsApp() {
+                this.submitServiceRequest('WhatsApp');
+            }
+
+            contactViaMessenger() {
+                this.submitServiceRequest('Messenger');
+            }
+
+            contactViaCall() {
+                this.submitServiceRequest('Phone Call');
+            }
+
+            contactViaEmail() {
+                this.submitServiceRequest('Email');
+            }
+
+            async submitServiceRequest(method) {
+                const name = document.getElementById('customerName').value || 'গ্রাহক';
+                const phone = document.getElementById('customerPhone').value || 'N/A';
+                const email = document.getElementById('customerEmail').value || 'N/A';
+                const service = document.getElementById('serviceType').value || 'সাধারণ সেবা';
+                const details = document.getElementById('serviceDetails').value || 'N/A';
+                
+                const request = {
+                    id: Date.now(),
+                    name,
+                    phone,
+                    email,
+                    service,
+                    details,
+                    method,
+                    date: new Date().toISOString(),
+                    status: 'pending'
+                };
+                
+                this.serviceRequests.push(request);
+                await this.saveData();
+                
+                // Prepare message based on method
+                let message = '';
+                const phoneNumber = '01317472069';
+                
+                switch(method) {
+                    case 'WhatsApp':
+                        message = `*আল্লাহর দান ডিজাইন সেন্টার*%0A%0A*গ্রাহক:* ${name}%0A*ফোন:* ${phone}%0A*ইমেইল:* ${email}%0A*সেবা:* ${service}%0A*বিস্তারিত:* ${details}`;
+                        window.open(`https://wa.me/88${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+                        break;
+                        
+                    case 'Messenger':
+                        // Messenger implementation
+                        this.showNotification('Messenger লিঙ্ক ওপেন হচ্ছে...', 'info');
+                        break;
+                        
+                    case 'Phone Call':
+                        window.open(`tel:${phoneNumber}`, '_blank');
+                        break;
+                        
+                    case 'Email':
+                        const subject = `সেবা অনুরোধ: ${service}`;
+                        const body = `নাম: ${name}%0D%0Aফোন: ${phone}%0D%0Aইমেইল: ${email}%0D%0Aসেবা: ${service}%0D%0Aবিস্তারিত: ${details}`;
+                        window.open(`mailto:info@allahdandesign.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+                        break;
+                }
+                
+                this.showNotification(`${method} এর মাধ্যমে আপনার অনুরোধ পাঠানো হয়েছে`, 'success');
+                
+                // Clear form
+                ['customerName', 'customerPhone', 'customerEmail', 'serviceDetails'].forEach(id => {
+                    document.getElementById(id).value = '';
+                });
+                document.getElementById('serviceType').selectedIndex = 0;
+            }
+
+            // Admin Functions
+            showAdminLogin() {
+                this.showModal('adminLoginModal');
+            }
+
+            loginAdmin() {
+                const password = document.getElementById('adminPassword').value;
+                
+                if (password === 'Abdullah Khan') {
+                    this.isAdmin = true;
+                    this.closeModal('adminLoginModal');
+                    this.showAdminPanel();
+                    this.showNotification('এডমিন প্যানেলে স্বাগতম!', 'success');
+                } else {
+                    this.showNotification('ভুল পাসওয়ার্ড!', 'error');
+                }
+            }
+
+            showAdminPanel() {
+                this.showModal('adminPanelModal');
+                this.switchAdminTab('addService');
+                this.loadExistingServices();
+                this.loadGalleryImages();
+                this.loadServiceRequests();
+            }
+
+            switchAdminTab(tabName) {
+                const tabs = {
+                    'addService': 'addServiceTab',
+                    'manageServices': 'manageServicesTab',
+                    'manageGallery': 'manageGalleryTab',
+                    'viewRequests': 'viewRequestsTab'
+                };
+                
+                document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                document.querySelector(`[onclick="switchAdminTab('${tabName}')"]`).classList.add('active');
+                document.getElementById(tabs[tabName]).classList.add('active');
+            }
+
+            addImageField() {
+                const container = document.getElementById('imageFieldsContainer');
+                const count = container.children.length + 1;
+                
+                const field = document.createElement('div');
+                field.className = 'form-group';
+                field.innerHTML = `
+                    <label class="form-label">ছবি ${count} লিংক</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="url" class="form-control" placeholder="https://example.com/image.jpg">
+                        <button type="button" class="btn btn-danger" onclick="this.parentElement.parentElement.remove()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(field);
+            }
+
+            async handleAddService(e) {
+                e.preventDefault();
+                this.showLoading();
+                
+                const name = document.getElementById('serviceName').value;
+                const description = document.getElementById('serviceDescription').value;
+                const price = document.getElementById('servicePrice').value;
+                const category = document.getElementById('serviceCategory').value;
+                
+                // Collect image URLs
+                const imageInputs = document.querySelectorAll('#imageFieldsContainer input');
+                const images = Array.from(imageInputs)
+                    .map(input => input.value)
+                    .filter(url => url.trim() !== '');
+                
+                // Add default images if none provided
+                if (images.length === 0) {
+                    images.push('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+                    images.push('https://images.unsplash.com/photo-1588854337236-6889d631faa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+                }
+                
+                const newService = {
+                    id: Date.now(),
+                    name,
+                    description,
+                    price,
+                    category,
+                    images,
+                    featured: true,
+                    rating: 4.5,
+                    orders: 0
+                };
+                
+                this.services.unshift(newService);
+                await this.saveData();
+                
+                this.showNotification('নতুন সেবা সফলভাবে যোগ করা হয়েছে!', 'success');
+                this.renderServices();
+                this.loadExistingServices();
+                
+                // Reset form
+                e.target.reset();
+                document.getElementById('imageFieldsContainer').innerHTML = '';
+                
+                this.hideLoading();
+            }
+
+            loadExistingServices() {
+                const container = document.getElementById('existingServicesContainer');
+                if (!container) return;
+                
+                container.innerHTML = this.services.map(service => `
+                    <div class="service-card" style="margin-bottom: 20px;">
+                        <div class="service-content">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <h3 style="margin: 0 0 10px 0;">${service.name}</h3>
+                                    <p style="color: #666; margin: 0 0 10px 0;">${service.description.substring(0, 100)}...</p>
+                                    <div style="display: flex; gap: 10px; align-items: center;">
+                                        <span class="service-price">${service.price}</span>
+                                        <span style="background: #E0F2FE; color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 14px;">
+                                            ${this.getCategoryLabel(service.category)}
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-danger" onclick="app.deleteService(${service.id})">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+                                ${service.images.map(img => `
+                                    <img src="${img}" style="width: 80px; height: 60px; object-fit: cover; border-radius: 8px;">
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            getCategoryLabel(category) {
+                const labels = {
+                    'curtain': 'সাইড পর্দা',
+                    'ceiling': 'সিলিং ডিজাইন',
+                    'chair': 'চেয়ার কাভার',
+                    'wedding': 'বিয়ের ডেকোরেশন',
+                    'office': 'অফিস ডেকোরেশন',
+                    'other': 'অন্যান্য'
+                };
+                return labels[category] || category;
+            }
+
+            async deleteService(serviceId) {
+                if (confirm('আপনি কি এই সেবা ডিলিট করতে চান?')) {
+                    this.services = this.services.filter(s => s.id !== serviceId);
+                    await this.saveData();
+                    this.renderServices();
+                    this.loadExistingServices();
+                    this.showNotification('সেবা ডিলিট করা হয়েছে', 'info');
+                }
+            }
+
+            async handleAddGallery(e) {
+                e.preventDefault();
+                
+                const url = document.getElementById('galleryImageUrl').value;
+                const title = document.getElementById('galleryImageTitle').value;
+                
+                if (!url || !title) {
+                    this.showNotification('দয়া করে সব তথ্য দিন', 'error');
+                    return;
+                }
+                
+                const newImage = {
+                    id: Date.now(),
+                    image: url,
+                    title: title
+                };
+                
+                this.gallery.unshift(newImage);
+                await this.saveData();
+                
+                this.showNotification('ছবি গ্যালারিতে যোগ করা হয়েছে', 'success');
+                this.renderGallery();
+                this.loadGalleryImages();
+                
+                e.target.reset();
+            }
+
+            loadGalleryImages() {
+                const container = document.getElementById('galleryImagesContainer');
+                if (!container) return;
+                
+                container.innerHTML = this.gallery.map(item => `
+                    <div class="uploaded-image">
+                        <img src="${item.image}" alt="${item.title}">
+                        <button class="remove-image" onclick="app.deleteGalleryImage(${item.id})">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+
+            async deleteGalleryImage(imageId) {
+                if (confirm('এই ছবি ডিলিট করতে চান?')) {
+                    this.gallery = this.gallery.filter(g => g.id !== imageId);
+                    await this.saveData();
+                    this.renderGallery();
+                    this.loadGalleryImages();
+                    this.showNotification('ছবি ডিলিট করা হয়েছে', 'info');
+                }
+            }
+
+            loadServiceRequests() {
+                const container = document.getElementById('serviceRequestsContainer');
+                if (!container) return;
+                
+                if (this.serviceRequests.length === 0) {
+                    container.innerHTML = '<p style="color: #666; text-align: center;">কোন সেবা অনুরোধ নেই</p>';
+                    return;
+                }
+                
+                container.innerHTML = this.serviceRequests.map(request => `
+                    <div class="service-card" style="margin-bottom: 15px;">
+                        <div class="service-content">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                                <div>
+                                    <h4 style="margin: 0 0 5px 0;">${request.name}</h4>
+                                    <div style="color: #666; font-size: 14px;">
+                                        <i class="fas fa-phone"></i> ${request.phone}
+                                        ${request.email !== 'N/A' ? ` | <i class="fas fa-envelope"></i> ${request.email}` : ''}
+                                    </div>
+                                </div>
+                                <span style="background: ${request.status === 'pending' ? '#FEF3C7' : '#D1FAE5'}; 
+                                      color: ${request.status === 'pending' ? '#92400E' : '#065F46'}; 
+                                      padding: 4px 12px; border-radius: 20px; font-size: 14px;">
+                                    ${request.status === 'pending' ? 'পেন্ডিং' : 'কমপ্লিট'}
+                                </span>
+                            </div>
+                            <p style="color: #555; margin-bottom: 10px;">
+                                <strong>সেবা:</strong> ${request.service}
+                            </p>
+                            <p style="color: #666; font-size: 14px; margin-bottom: 10px;">
+                                <strong>বিস্তারিত:</strong> ${request.details}
+                            </p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--gray-200);">
+                                <div style="color: #666; font-size: 14px;">
+                                    <i class="fas fa-calendar"></i> ${new Date(request.date).toLocaleDateString('bn-BD')}
+                                    <span style="margin-left: 15px;">
+                                        <i class="fas fa-comment"></i> ${request.method}
+                                    </span>
+                                </div>
+                                <div>
+                                    <button class="btn btn-success" style="padding: 6px 12px; font-size: 14px;" 
+                                            onclick="app.updateRequestStatus(${request.id}, 'completed')">
+                                        কমপ্লিট
+                                    </button>
+                                    <button class="btn btn-danger" style="padding: 6px 12px; font-size: 14px; margin-left: 10px;" 
+                                            onclick="app.deleteServiceRequest(${request.id})">
+                                        ডিলিট
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            async updateRequestStatus(requestId, status) {
+                const request = this.serviceRequests.find(r => r.id === requestId);
+                if (request) {
+                    request.status = status;
+                    await this.saveData();
+                    this.loadServiceRequests();
+                    this.showNotification('স্ট্যাটাস আপডেট করা হয়েছে', 'success');
+                }
+            }
+
+            async deleteServiceRequest(requestId) {
+                if (confirm('এই অনুরোধ ডিলিট করতে চান?')) {
+                    this.serviceRequests = this.serviceRequests.filter(r => r.id !== requestId);
+                    await this.saveData();
+                    this.loadServiceRequests();
+                    this.showNotification('অনুরোধ ডিলিট করা হয়েছে', 'info');
+                }
+            }
+
+            logoutAdmin() {
+                this.isAdmin = false;
+                this.closeModal('adminPanelModal');
+                this.showNotification('সফলভাবে লগআউট করা হয়েছে', 'info');
+            }
+        }
+
+        // Global functions for onclick events
+        function showAdminLogin() {
+            window.app.showAdminLogin();
+        }
+
+        function switchTab(tabId) {
+            window.app.switchTab(tabId);
+        }
+
+        function switchAdminTab(tabName) {
+            window.app.switchAdminTab(tabName);
+        }
+
+        function addImageField() {
+            window.app.addImageField();
+        }
+
+        function contactViaWhatsApp() {
+            window.app.contactViaWhatsApp();
+        }
+
+        function contactViaMessenger() {
+            window.app.contactViaMessenger();
+        }
+
+        function contactViaCall() {
+            window.app.contactViaCall();
+        }
+
+        function contactViaEmail() {
+            window.app.contactViaEmail();
+        }
+
+        function showServiceRequest() {
+            window.app.showServiceRequest();
+        }
+
+        function showAllServices() {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', () => {
+            window.app = new DesignCenterApp();
+            
+            // Close modal when clicking outside
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Close modal function
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        // GitHub Deployment Guide
+        function showDeploymentGuide() {
+            alert(`
+🚀 GitHub Pages ডেপ্লয়মেন্ট গাইড:
+
+১. GitHub রিপোজিটরি তৈরি করুন:
+   - https://github.com/new
+   - নাম: allah-daan-design-premium
+   - Public সিলেক্ট করুন
+
+২. এই ফাইলগুলো আপলোড করুন:
+   - index.html (এই ফাইল)
+   - README.md (ঐচ্ছিক)
+
+৩. GitHub Pages সেটআপ:
+   - Settings → Pages → Build and deployment
+   - Source: Deploy from a branch → main → / (root)
+
+৪. GitHub Actions সেটআপ (এডভান্সড):
+   - .github/workflows/deploy.yml তৈরি করুন
+   - স্বয়ংক্রিয় ডেপ্লয়মেন্ট কনফিগার করুন
+
+৫. কাস্টম ডোমেইন:
+   - Custom domain যোগ করুন
+   - DNS সেটিংস আপডেট করুন
+
+সাইট লাইভ হবে: https://username.github.io/allah-daan-design-premium
+
+📦 GitHub Data Storage:
+- সকল ডেটা localStorage-এ সংরক্ষিত
+- GitHub API এর মাধ্যমে sync করা যাবে
+- Admin প্যানেল থেকে ম্যানেজ করা যাবে
+            `);
+        }
+    </script>
+</body>
+</html>
